@@ -10,19 +10,16 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 public class View{
-	AnchorPane anchorpane = new AnchorPane();
-	Slider interceptS = new Slider(-40, 40, 0);
-	Slider slopeS = new Slider(-10, 10, 0);
-	Label position = new Label();
-	Label positionL = new Label("position: ");
-	Label scoreL = new Label("\tscore: ");
-	Label score = new Label();
+	private AnchorPane anchorpane = new AnchorPane();
+	private Slider interceptS = new Slider(-40, 40, 0);
+	private Slider slopeS = new Slider(-10, 10, 0);
+	private Label position = new Label();
+	private Label positionL = new Label("position: ");
+	private Label score = new Label();
+	private Button buttonD = new Button("Shoot");
+	private Button resetE = new Button("Reset Easy");
+	private Button resetH = new Button("Reset Hard");
 	
-
-	
-	
-
-
 	public void start(Stage primaryStage) {
 		primaryStage.setTitle("BubbleShooter");
 		GridPane root = new GridPane();
@@ -32,19 +29,23 @@ public class View{
 		
 		Label interceptL = new Label("Intercept");
 		Label slopeL = new Label("Slope");
-		Button button = new Button("Draw");
+		Label scoreL = new Label("\tscore: ");
+		
 		
 		root.add(panel, 0, 1);
 		panel.add(interceptL, 0, 1);
 		panel.add(interceptS, 1, 1);
 		panel.add(slopeL, 2, 1);
 		panel.add(slopeS, 3, 1);
-		panel.add(button, 4, 1);
+		panel.add(buttonD, 4, 1);
 		
 		panel.add(positionL, 5, 1);
 		panel.add(position, 6, 1);
 		panel.add(scoreL, 7, 1);
 		panel.add(score, 8, 1);
+
+		panel.add(resetE, 9, 1);
+		panel.add(resetH, 10, 1);
 		
 		
 		primaryStage.setScene(new Scene(root));
@@ -73,5 +74,17 @@ public class View{
 	
 	public Label getPosition() {
 		return position;
+	}
+
+	public Button getButtonD() {
+		return buttonD;
+	}
+
+	public Button getResetE() {
+		return resetE;
+	}
+
+	public Button getResetH() {
+		return resetH;
 	}
 }

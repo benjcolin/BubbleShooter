@@ -5,6 +5,7 @@ import java.util.Random;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
@@ -37,6 +38,24 @@ public class Controller extends Application {
 				parameter.setSlope(newValue.doubleValue());
 				preview.updatePreview(parameter.getIntercept(), parameter.getSlope());
 			}
+		});
+		
+		view.getButtonD().setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		        
+		    }
+		});
+		
+		view.getResetE().setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		        
+		    }
+		});
+		
+		view.getResetH().setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		        
+		    }
 		});
 
 		view.getAnchorpane().getChildren().add(preview.getLine());
