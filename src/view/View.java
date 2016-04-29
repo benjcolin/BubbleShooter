@@ -27,7 +27,7 @@ public class View{
 		primaryStage.setTitle("BubbleShooter");
 		GridPane root = new GridPane();
 		GridPane panel = new GridPane();
-		anchorpane.setPrefSize(1000, 1000);
+		anchorpane.setPrefSize(600, 600);
 		root.getChildren().add(anchorpane);
 		
 		Label interceptL = new Label("Intercept");
@@ -50,8 +50,8 @@ public class View{
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
 		for(int i = 0; i < 20; i++){
-			anchorpane.getChildren().add(new Line(0, 50 * i, 1000, 50 * i));
-			anchorpane.getChildren().add(new Line(50 * i, 0, 50 * i, 1000));
+			anchorpane.getChildren().add(new Line(0, 30 * i, 600, 30 * i));
+			anchorpane.getChildren().add(new Line(30 * i, 0, 30 * i, 600));
 		}
 	}
 
