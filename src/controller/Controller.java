@@ -43,14 +43,13 @@ public class Controller extends Application {
 
 		Random rand = new Random();
 		for (int i = 0; i < 10; i++) {
-			// view.getGraphicscontext().strokeOval(rand.nextInt(800), y, w, h);
-			game.addBubble(new Bubble(new Circle(rand.nextInt(1000), rand.nextInt(1000), 10)));
+			game.addBubble(new Bubble(new Circle(rand.nextInt(20) * 30, rand.nextInt(20) * 30, 5)));
 			game.getBubbles().get(i).getCircle().setOnMouseEntered(new EventHandler<MouseEvent>() {
 
 				@Override
 				public void handle(final MouseEvent t) {
 					Circle circle = (Circle) t.getSource();
-					view.getPosition().setText(circle.getCenterX() + ", " + circle.getCenterY());
+					view.getPosition().setText(Math.round((circle.getCenterX() / 30) - 10) + ", " + Math.round((circle.getCenterY() / 30) - 10));
 				}
 			});
 

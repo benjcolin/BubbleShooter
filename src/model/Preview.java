@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 public class Preview {
 	private double intercept;
 	private double slope;
-	private javafx.scene.shape.Line line = new javafx.scene.shape.Line(350, 400, 450, 400);
+	private javafx.scene.shape.Line line = new javafx.scene.shape.Line(250, 300, 350, 300);
 
 	public void Preview() {
 		line.setFill(Color.BLACK);
@@ -56,10 +56,10 @@ public class Preview {
 			eX = (eY + intercept) / -slope;
 		}
 
-		sX += 500;
-		sY += 500;
-		eX += 500;
-		eY += 500;
+		sX += 300;
+		sY += 300;
+		eX += 300;
+		eY += 300;
 
 		line.setStartX(sX);
 		line.setStartY(sY);
