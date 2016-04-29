@@ -19,7 +19,6 @@ public class Controller extends Application {
 	Game game = new Game();
 	Preview preview = new Preview();
 	Parameter parameter = new Parameter();
-	Score score = new Score();
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -42,7 +41,7 @@ public class Controller extends Application {
 		
 		view.getButtonD().setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
-		        
+		        Line line = new Line(preview.getIntercept(), preview.getSlope());
 		    }
 		});
 		
@@ -85,7 +84,11 @@ public class Controller extends Application {
 			view.getAnchorpane().getChildren().add(game.getBubbles().get(i).getCircle());
 		}
 
-		String scoreText = "" + score.getScore();
+		showScore();
+	}
+	
+	private void showScore(){
+		String scoreText = "" + game.getScore().getScore();
 		view.getScore().setText(scoreText);
 	}
 

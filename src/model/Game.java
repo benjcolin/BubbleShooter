@@ -4,11 +4,7 @@ import java.util.ArrayList;
 
 public class Game {
 	private ArrayList<Bubble> bubbles = new ArrayList<Bubble>();
-	private int score;
-	
-	public void Bubble(){
-		
-	}
+	private Score score = new Score();
 	
 	public void markBubbles(){
 		
@@ -22,7 +18,7 @@ public class Game {
 		this.bubbles.add(bubble);
 	}
 
-	public int getScore(){
-		return this.score;
+	public Score getScore(){
+		return score;
 	}
 }

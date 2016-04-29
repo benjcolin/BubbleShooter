@@ -14,7 +14,6 @@ public class View{
 	private Slider interceptS = new Slider(-40, 40, 0);
 	private Slider slopeS = new Slider(-10, 10, 0);
 	private Label position = new Label();
-	private Label positionL = new Label("position: ");
 	private Label score = new Label();
 	private Button buttonD = new Button("Shoot");
 	private Button resetE = new Button("Reset Easy");
@@ -30,6 +29,7 @@ public class View{
 		Label interceptL = new Label("Intercept");
 		Label slopeL = new Label("Slope");
 		Label scoreL = new Label("\tscore: ");
+		Label positionL = new Label("position: ");
 		
 		
 		root.add(panel, 0, 1);
@@ -44,8 +44,8 @@ public class View{
 		panel.add(scoreL, 7, 1);
 		panel.add(score, 8, 1);
 
-		panel.add(resetE, 9, 1);
-		panel.add(resetH, 10, 1);
+		panel.add(resetE, 0, 2);
+		panel.add(resetH, 1, 2);
 		
 		
 		primaryStage.setScene(new Scene(root));
